@@ -10,7 +10,7 @@ Función que indica si un entero positivo es primo.
 fn is_prime(n: u32) -> bool {
     let n_sqrt = f64::sqrt(n as f64) as u32;
 
-    for i in 2..n_sqrt as u32{
+    for i in 2..(n_sqrt+1) as u32{
         if n % i == 0 {
             return false;
         }
@@ -48,7 +48,7 @@ fn solucion_pregunta_2(s: &HashSet<u32>) -> u32 {
 }
 
 fn main() {
-    let values: Vec<u32> = vec![2, 7, 8, 19, 13];
+    let values: Vec<u32> = vec![2, 7, 1, 15, 4, 8, 9, 6];
     let mut s: HashSet<u32> = HashSet::new();
 
     for item in values.into_iter() {
