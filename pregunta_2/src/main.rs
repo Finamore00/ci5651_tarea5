@@ -39,7 +39,7 @@ fn solucion_pregunta_2(s: &HashSet<u32>) -> u32 {
     for (even_pos, even_num) in evens.iter().enumerate() {
         for (odd_pos, odd_num) in odds.iter().enumerate() {
             if is_prime(odd_num + even_num) {
-                g.add_edge(even_pos as u32, odd_pos as u32);
+                g.add_edge((even_pos+1) as u32, (odd_pos+1) as u32);
             }
         }
     }
