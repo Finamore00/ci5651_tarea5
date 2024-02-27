@@ -112,7 +112,7 @@ fn minimax(game_state: &GameState, alfa: i32, beta: i32) -> i32 {
 fn main() {
     let initial_game_state = GameState {
         board: [[BoardValues::Empty; 3]; 3],
-        current_turn: Players::VertPlayer,
+        current_turn: Players::HorPlayer,
         last_played_pos: (4, 4)
     };
 
